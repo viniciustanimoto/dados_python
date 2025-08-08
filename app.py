@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide",
 )
 
-df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/viniciustanimoto/dados_python/refs/heads/main/dados-imersao-final-vt.csv")
 st.sidebar.header("🔍 Filtros")
 anos_disponiveis = sorted(df['ano'].unique())
 anos_selecionados = st.sidebar.multiselect("Ano", anos_disponiveis, default=anos_disponiveis)
@@ -121,3 +121,4 @@ st.subheader("Dados Detalhados")
 st.dataframe(df_filtrado)
 
      
+
